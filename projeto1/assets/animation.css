@@ -1,0 +1,23 @@
+
+.games{
+    width: 35vh;
+    height: 50vh;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    display: block;
+    margin-left: 60vh;
+    margin-top: 10vh;
+    border-style: solid;
+   margin-right: auto;
+   margin-left: auto;
+  }
+  
+  @keyframes example {
+    0%   {background-image: url(/assets/img/stardew.jpeg);  left:-30vh; top:0px; background-position: center;  background-repeat:  no-repeat; background-size: cover;  }
+    25%  {background-image: url(/assets/img/dave.png); left: 30vh; top:0px; background-repeat:  no-repeat; background-size: cover;  }
+    50%  {background-image: url(/assets/img//theLast.jpeg); left:30vh; top:20vh; background-repeat:  no-repeat;background-size: cover;  }
+    75%  {background-image: url(/assets/img/ghost.jpeg); left:-30vh; top:20vh;background-position: center; background-repeat:  no-repeat; background-size: cover; }
+    100% {background-image: url(/assets/img/stardew.jpeg); left:-30vh; top:0px; background-position: center; background-repeat:  no-repeat;  background-size: cover; }
+  }
