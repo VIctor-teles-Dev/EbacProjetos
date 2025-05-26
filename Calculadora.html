@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Ebac</title>
+</head>
+<body>
+   
+    <form>
+        <input type="number" name="NumeroA" placeholder="Campo A" required>
+        <p> &lt; </p>
+         <input type="number" name="NumeroB" placeholder="Campo B" required>
+        <button type="submit">Enviar</button>
+         <script>  document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const numeroA = parseInt(this.NumeroA.value);
+            const numeroB = parseInt(this.NumeroB.value);
+            if (numeroA < numeroB) {
+                alert(`O número ${numeroA} é menor que o número ${numeroB}`);
+            } else {
+                alert(` Por favor, coloque o número menor no campo A `);
+            }
+        });</script>
+</body>
+</html>
