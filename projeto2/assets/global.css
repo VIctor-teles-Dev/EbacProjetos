@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eef1f5; /* Tom de cinza mais frio */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 24px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #212529;
+}
+
+form {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 56px;
+    align-items: center;
+}
+
+form input {
+    flex-grow: 1;
+    font-size: 24px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 8px;
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+form button {
+    background-color: #007bff; /* Azul moderno */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #0056b3; /* Tom mais escuro para hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre células */
+}
+
+table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+table td {
+    padding: 16px;
+    text-align: left;
+    font-size: 18px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Alinha o conteúdo da primeira e última coluna ao centro */
+table th:first-child,
+table td:first-child {
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+tr.favorito-row {
+    background-color: #fffbe6; /* Fundo amarelo claro */
+    font-weight: bold;
+}
+
+tr.favorito-row:hover {
+    background-color: #fdf8e1; /* Tom de amarelo mais escuro para hover */
+}
+
+td input[type="checkbox"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #007bff; /* Cor do checkbox quando marcado */
+}
+
+/* Media Query para responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form input, form button {
+        font-size: 18px;
+        width: 100%;
+    }
+}
