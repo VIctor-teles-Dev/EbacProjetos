@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #4a4a4a;
+}
+
+#form-tarefa {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.5em;
+}
+
+#form-tarefa input {
+    flex-grow: 1;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#form-tarefa button {
+    padding: 0.8em 1.2em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#form-tarefa button:hover {
+    background-color: #218838;
+}
+
+#lista-tarefas {
+    list-style: none;
+}
+
+#lista-tarefas li {
+    padding: 0.8em;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+#lista-tarefas li:hover {
+    background-color: #f0f0f0;
+}
+
+#lista-tarefas li span {
+    flex-grow: 1;
+    transition: color 0.3s ease;
+}
+
+.checkbox-tarefa {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.tarefa-concluida .checkbox-tarefa {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.tarefa-concluida .checkbox-tarefa::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.botoes-tarefa {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0; /* Impede que os botões encolham */
+}
+
+.botoes-tarefa button {
+    padding: 0.4em 0.8em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-apagar {
+    background-color: #dc3545; /* Vermelho */
+}
+
+.btn-apagar:hover {
+    background-color: #c82333;
+}
+
+.tarefa-concluida {
+    background-color: #f8f9fa;
+}
+
+.tarefa-concluida span {
+    text-decoration: line-through;
+    color: #888;
+}

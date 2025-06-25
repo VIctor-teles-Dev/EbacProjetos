@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de Tarefas</h1>
+        </header>
+        <form id="form-tarefa">
+            <input type="text" id="nome-tarefa" required placeholder="Nome da tarefa">
+            <button type="submit">Cadastrar</button>
+        </form>
+        <ul id="lista-tarefas">
+            <!-- As tarefas serão adicionadas aqui via jQuery -->
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/main.js"></script>
+</body>
+</html>
