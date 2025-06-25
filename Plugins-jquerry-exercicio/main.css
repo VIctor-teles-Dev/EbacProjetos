@@ -100,54 +100,6 @@ nav a:hover::after {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media screen and (max-width: 768px) {
-    #menu-hamburguer {
-        display: block; /* Fica visível em telas menores */
-    }
-
-    nav ul {
-        display: none; /* Menu escondido por padrão em telas menores */
-        position: absolute;
-        top: 100%; /* Posiciona abaixo do header */
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        background-color: #2c3e50; /* Match header background */
-        z-index: 1;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Shadow for dropdown */
-    }
-
-    nav li {
-        display: block; /* Itens um abaixo do outro */
-        text-align: center;
-        margin-left: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
-    }
-    nav li:last-child {
-        border-bottom: none; /* No border on last item */
-    }
-
-    nav a {
-        display: block;
-        padding: 16px;
-    }
-
-    .sobre-nos-content { /* Updated in new section */
-        flex-direction: column;
-        text-align: left; /* Alinha o texto à esquerda no mobile */
-        padding: 50px;
-        gap: 50px;
-    }
-
-    .sobre-nos-imagem {
-        max-width: 100%;
-    }
-
-    .sobre-nos-texto h3,
-    .sobre-nos-texto p {
-        text-align: left;
-    }
-}
 /* Seção do Carrossel */
 .carousel-container {
     width: 100%;
@@ -506,4 +458,110 @@ form button:hover {
     color: red;
     font-size: 0.9em;
     margin-top: 4px;
+}
+
+/* ============================================ */
+/*              DESIGN RESPONSIVO               */
+/* ============================================ */
+
+/* Telas de Tablet e menores (641px até 1023px) */
+@media screen and (max-width: 1023px) {
+    .container {
+        width: 95%;
+    }
+
+    /* --- Header e Navegação --- */
+    #menu-hamburguer {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        z-index: 1;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav li {
+        display: block;
+        text-align: center;
+        margin-left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    nav a {
+        display: block;
+        padding: 16px;
+    }
+
+    /* --- Sobre Nós --- */
+    .sobre-nos-content {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 30px;
+    }
+
+    .sobre-nos-imagem {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .sobre-nos-texto {
+        text-align: center;
+    }
+
+    .nossos-diferenciais {
+        /* Alinha os itens à esquerda dentro do container de texto centralizado */
+        display: inline-flex; 
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+/* Telas de Celular (até 640px) */
+@media screen and (max-width: 640px) {
+    .logo {
+        font-size: 1.5em;
+    }
+
+    /* --- Carrossel --- */
+    .carousel img {
+        height: 400px; /* Diminui a altura do carrossel */
+    }
+
+    .slide-content h2 {
+        font-size: 1.8em;
+    }
+
+    .slide-content p {
+        font-size: 1em;
+        margin-bottom: 16px;
+    }
+
+    /* --- Seções --- */
+    .veiculos-em-destaque h2,
+    .sobre-nos-header h2,
+    .formulario-compra h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+
+    /* --- Sobre Nós --- */
+    .sobre-nos-content {
+        padding: 25px 20px;
+        gap: 30px;
+    }
+
+    .sobre-nos-imagem {
+        max-width: 100%;
+    }
 }

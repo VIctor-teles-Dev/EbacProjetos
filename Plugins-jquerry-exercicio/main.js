@@ -13,21 +13,20 @@ $(document).ready(function () {
     $("nav ul").slideToggle();
   });
 
-  // Handle menu visibility on resize
-  // This function ensures the menu is always visible on larger screens (desktop)
-  // and relies on CSS for its initial hidden state on smaller screens (mobile).
-  // The slideToggle handles visibility on mobile.
+  // Garante que o menu de navegação se comporte corretamente ao redimensionar a tela.
+  // O problema original era que ao diminuir a tela (ex: de desktop para tablet),
+  // o menu permanecia aberto por causa de um estilo inline adicionado pelo jQuery.
   function handleMenuVisibility() {
-    if ($(window).width() > 768) {
-      $("nav ul").show(); // Ensure menu is visible on desktop
+    // O ponto de quebra (breakpoint) para o menu hambúrguer é 1023px, conforme o CSS.
+    if ($(window).width() > 1023) {
+      // Em telas maiores (desktop), removemos quaisquer estilos embutidos (inline styles)
+      // que o jQuery (ex: slideToggle) possa ter adicionado. Isso faz com que o menu
+      // volte a ser controlado apenas pelo CSS, exibindo-se corretamente como menu horizontal.
+      $("nav ul").removeAttr('style');
     }
-    // No 'else' block here. On mobile, CSS handles the default 'display: none',
-    // and the slideToggle handles user interaction. This prevents the menu
-    // from being forcibly hidden if the user opened it and then resized slightly.
   }
 
   $(window).resize(handleMenuVisibility);
-  handleMenuVisibility(); // Call on page load to set initial state
 
   // Aplica máscaras aos campos do formulário usando jQuery Mask Plugin
   $('#telefone').mask('(00) 00000-0000');
