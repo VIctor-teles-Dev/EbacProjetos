@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Plugins jQuery</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Carros & Cia</div>
+            <nav>
+                <button id="menu-hamburguer">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="#veiculos">Veículos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide">
+                <img src="assets/slide1.png" alt="Carro esportivo vermelho">
+                <div class="slide-content">
+                    <h2>O Carro dos Seus Sonhos</h2>
+                    <p>Encontre aqui os melhores modelos com condições imperdíveis.</p>
+                    <a href="#contato" class="btn-carousel">Tenho Interesse</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/slide2.png" alt="Carro SUV moderno azul">
+                <div class="slide-content">
+                    <h2>Tecnologia e Conforto</h2>
+                    <p>SUVs modernos que combinam com seu estilo de vida.</p>
+                    <a href="#contato" class="btn-carousel">Ver Ofertas</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/slide3.png" alt="Carro sedan de luxo preto">
+                <div class="slide-content">
+                    <h2>Elegância e Performance</h2>
+                    <p>Sedans de luxo que impressionam por onde passam.</p>
+                    <a href="#contato" class="btn-carousel">Descubra</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="veiculos" class="container veiculos-em-destaque">
+            <h2>Veículos em Destaque</h2>
+            <div class="lista-veiculos">
+                <div class="veiculo">
+                    <img src="assets/slide4.png" alt="Carro 1">
+                    <h3>Nome do Veículo 1</h3>
+                    <p>
+                        Descrição breve do veículo, como ano, quilometragem e cor.
+                    </p>
+                    <strong>R$ 70.000,00</strong>
+                    <button type="button">Ver mais</button>
+                </div>
+                <div class="veiculo">
+                    <img src="assets/slide5.png" alt="Carro 2">
+                    <h3>Nome do Veículo 2</h3>
+                    <p>
+                        Descrição breve do veículo, como ano, quilometragem e cor.
+                    </p>
+                    <strong>R$ 85.000,00</strong>
+                    <button type="button">Ver mais</button>
+                </div>
+                <div class="veiculo">
+                    <img src="assets/slide6.png" alt="Carro 3">
+                    <h3>Nome do Veículo 3</h3>
+                    <p>
+                        Descrição breve do veículo, como ano, quilometragem e cor.
+                    </p>
+                    <strong>R$ 92.000,00</strong>
+                    <button type="button">Ver mais</button>
+                </div>
+                <div class="veiculo">
+                    <img src="assets/slide1.png" alt="Carro 4">
+                    <h3>Nome do Veículo 4</h3>
+                    <p>
+                        Descrição breve do veículo, como ano, quilometragem e cor.
+                    </p>
+                    <strong>R$ 110.000,00</strong>
+                    <button type="button">Ver mais</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="sobre" class="sobre-nos">
+        <div class="container">
+            <div class="sobre-nos-header">
+                <h2>Sobre Nós</h2>
+                <p class="subtitulo">Paixão por carros, compromisso com você.</p>
+            </div>
+            <div class="sobre-nos-content">
+                <div class="sobre-nos-imagem">
+                    <img src="assets/Interior.png" alt="Interior da concessionária de carros">
+                </div>
+                <div class="sobre-nos-texto">
+                    <h3>Nossa Missão</h3>
+                    <p>Somos apaixonados por carros e dedicados a oferecer a melhor experiência de compra para nossos clientes. Com um showroom repleto de veículos de alta qualidade e uma equipe de especialistas pronta para ajudar, transformamos o sonho do carro novo em realidade.</p>
+                    <div class="nossos-diferenciais">
+                        <div class="diferencial">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Qualidade Garantida</span>
+                        </div>
+                        <div class="diferencial">
+                            <i class="fas fa-headset"></i>
+                            <span>Atendimento Premium</span>
+                        </div>
+                        <div class="diferencial">
+                            <i class="fas fa-handshake"></i>
+                            <span>Confiança e Transparência</span>
+                        </div>
+                    </div>
+                    <a href="#contato" class="btn-sobre">Venha nos visitar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container formulario-compra">
+        <h2>Faça sua proposta</h2>
+        <form id="form-compra">
+            <div class="form-campo">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+            <div class="form-campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-campo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            <div class="form-campo">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf">
+            </div>
+            <div class="form-campo">
+                <label for="endereco">Endereço completo:</label>
+                <input type="text" id="endereco" name="endereco">
+            </div>
+            <div class="form-campo">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep">
+            </div>
+            <div class="form-campo">
+                <label for="veiculo-interesse">Veículo de interesse:</label>
+                <input type="text" id="veiculo-interesse" name="veiculoInteresse" placeholder="Digite o nome do veículo que te interessou">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_pt_BR.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
