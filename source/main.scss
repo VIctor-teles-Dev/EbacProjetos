@@ -1,0 +1,25 @@
+@use "reset";
+@use "header";
+@use "produtos";
+@use "media";
+@use "variaveis/var" as *;
+
+
+
+body {
+    background-color: $background-color;
+}
+
+
+.container {
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+section {
+    padding: 56px 0;
+}
+
