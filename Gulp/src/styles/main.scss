@@ -1,0 +1,7 @@
+@use "var";
+
+body {
+  background-color: var.$corPrincipal;
+  margin: 10px;
+  padding: 10px;
+}

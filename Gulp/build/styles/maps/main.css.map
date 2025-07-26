@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","home/devVictor/%C3%81rea%20de%20trabalho/Estudos/EBAC/Projetos/Gup/src/styles/var.scss"],"names":[],"mappings":"AAEA;EACE,kBCHa;EDIb;EACA","sourcesContent":["@use \"var\";\n\nbody {\n  background-color: var.$corPrincipal;\n  margin: 10px;\n  padding: 10px;\n}\n","$corPrincipal: rgb(68, 68, 68);"],"file":"../main.css"}
